@@ -1,5 +1,9 @@
+**/__pycache__/*.pyc
+
 _results
 .mypy_cache
 venv
 .python-version
 poetry.lock
+.env
+.DS_Store
