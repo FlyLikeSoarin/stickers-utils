@@ -1,0 +1,5 @@
+_results
+.mypy_cache
+venv
+.python-version
+poetry.lock

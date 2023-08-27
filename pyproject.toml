@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "image-proccesing"
+version = "0.1.0"
+description = ""
+authors = ["Eugene Vihrev <evgeny.vihrev@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+click = "^8.1.7"
+Pillow = "^10.0.0"
+numpy = "^1.25.2"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+mypy = "^1.5.1"
+flake8 = "^6.1.0"
+poethepoet = "^0.22.0"
+isort = "^5.12.0"
+types-pillow = "^10.0.0.2"
+
+[tool.poetry.scripts]
+stickers-utils = "src.main:stickers_utils"
+
+[tool.mypy]
+exclude = ["venv", "tests"]
+
+[tool.poe.tasks]
+lint = "python tests/main.py lint"
+format = "python tests/main.py format"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
